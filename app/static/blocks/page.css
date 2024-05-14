@@ -18,3 +18,8 @@ div {
 h3 {
   font-size: 30px
 }
+.navbar-nav{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
