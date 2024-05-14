@@ -1,5 +1,6 @@
 p, h1 {
     margin: 0;
+    font-size: 30px;
   }
   
   .page__body {
@@ -7,3 +8,13 @@ p, h1 {
     margin: 0;
     margin-block-end: var(--footer-height);
 } 
+h2 {
+  font-size: 40px
+}
+
+div {
+  font-size: 30px
+}
+h3 {
+  font-size: 30px
+}
