@@ -1,17 +1,30 @@
-{% extends  "base.html" %}
+{% extends "base.html" %}
 {% block content %}
     {% if error is defined %}
     <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
-        <strong>Error!</strong> {{error}}
+        <strong>Error!</strong> {{ error }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     {% endif %}
-    <form class="container mt-3" method="POST" action="{{url_for('extract')}}">
-    <div class="form-group" >
-      <label for="exampleInputProduct_id">Product ID</label>
-      <input type="text" class="form-control" name="product_id" id="product_id" aria-describedby="emailHelp" placeholder="Enter product code" required>
-      <small id="product_id_help" class="form-text text-muted">Must be from 8-10 digits.</small>
-      <button type="extract" class="btn btn-primary">Extract</button>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-4">Extract Product Reviews</h4>
+                        <form method="POST" action="{{ url_for('extract') }}">
+                            <div class="mb-3">
+                                <label for="product_id" class="form-label">Product ID</label>
+                                <input type="text" class="form-control" name="product_id" id="product_id" placeholder="Enter product code" required>
+                                <small id="product_id_help" class="form-text text-muted">Must be from 8-10 digits.</small>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-block">Extract</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </form>
-{% endblock%}
+{% endblock %}

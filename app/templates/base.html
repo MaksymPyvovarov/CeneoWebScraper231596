@@ -6,32 +6,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <title>Ceneo Web Scraper</title>
 </head>
 <body class="page__body">
-    <header class="header">
+  <header class="header">
       <h1 class="header__header">Ceneo.pl Web Scraper</h1>
-    </header>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
+  </header>
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/index">Home</a></li>
-            <li><a href="{{url_for('extract')}}">Extract</a></li>
-            <li><a href="{{url_for('products')}}">Products</a></li>
-            <li><a href="{{url_for('author')}}">About the author</a></li>
+              <li class="active"><a href="/index"><i class="bi bi-house"></i> Home</a></li>
+              <li><a href="{{ url_for('extract') }}"><i class="bi bi-box-arrow-down"></i> Extract</a></li>
+              <li><a href="{{ url_for('products') }}"><i class="bi bi-list"></i> Products</a></li>
+              <li><a href="{{ url_for('author') }}"><i class="bi bi-person"></i> About the Author</a></li>
           </ul>
-        </div>
-      </nav>
-    
-  
-    <section class="section">
+      </div>
+  </nav>
+  <section class="section">
       {% block content %}
-        <p class="section__description">This is base file</p>
+      <p class="section__description">This is base file</p>
       {% endblock %}
-    </section>
+  </section>
   
     <footer class="footer">
       <p class="footer__author-name">Maksym Pyvovarov</p>
